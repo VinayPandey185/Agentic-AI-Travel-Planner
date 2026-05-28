@@ -109,7 +109,7 @@ Additional Smart Features:
 | Google Maps | Place Navigation |
 | Open-Meteo API | Live Weather |
 | JSON Dataset | Flights, Hotels, Places |
-| ReportLab | PDF Generation |
+| ReportLab | Travel Plan PDF Export |
 
 ---
 
