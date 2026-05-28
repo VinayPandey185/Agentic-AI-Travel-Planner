@@ -260,6 +260,8 @@ Companies like **MakeMyTrip, Booking.com, Ixigo, and ClearTrip** are adopting si
 ### 💰 Budget & AI Insights
 ![Budget AI Insights](Screenshots/budget_ai_insights.png)
 
+---
+
 ## 🎯 Future Enhancements
 
 - Real-time Flight APIs
@@ -273,7 +275,7 @@ Companies like **MakeMyTrip, Booking.com, Ixigo, and ClearTrip** are adopting si
 ## 👨‍💻 Author
 
 **Vinay Pandey**  
-Full Stack Developer | AI Enthusiast
+Full Stack Developer | AI & Software Development Enthusiast
 
 ---
 
