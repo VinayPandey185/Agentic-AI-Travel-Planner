@@ -253,7 +253,7 @@ Companies like **MakeMyTrip, Booking.com, Ixigo, and ClearTrip** are adopting si
 ## 👨‍💻 Author
 
 **Vinay Pandey**  
-MCA Graduate | Full Stack Developer | AI Enthusiast
+Full Stack Developer | AI Enthusiast
 
 ---
 
