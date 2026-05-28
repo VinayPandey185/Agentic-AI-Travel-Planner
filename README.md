@@ -161,7 +161,8 @@ Agentic-AI-Travel-Planner/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone: https://github.com/VinayPandey185/Agentic-AI-Travel-Planner
+git clone https://github.com/VinayPandey185/Agentic-AI-Travel-Planner.git
+
 cd Agentic-AI-Travel-Planner
 ```
 
