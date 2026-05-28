@@ -201,19 +201,25 @@ streamlit run app.py
 
 ---
 
-## 📸 Project Output
+## ✨ Key Features Delivered
 
 ### Features Included
+
 ✅ Flight Recommendation  
 ✅ Hotel Recommendation  
-✅ Weather Forecast  
-✅ Budget Breakdown  
+✅ Tourist Place Discovery  
 ✅ Personalized Travel Preferences  
 ✅ Google Maps Integration  
-✅ Dynamic Booking Links  
-✅ PDF Download  
-✅ AI Insights  
-✅ Agentic AI Reasoning
+✅ Dynamic Flight Booking Recommendation  
+✅ Dynamic Hotel Booking Recommendation  
+✅ Live Weather Forecast  
+✅ Smart Budget Planning  
+✅ Budget Saved / Exceeded Indicator  
+✅ AI Insights & Travel Reasoning  
+✅ Day-wise Travel Itinerary  
+✅ PDF Download Export  
+✅ Agentic AI Workflow  
+✅ Premium Streamlit UI
 
 ---
 
