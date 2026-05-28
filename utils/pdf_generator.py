@@ -3,7 +3,6 @@ from reportlab.platypus import (
     Spacer,
     Paragraph,
 )
-from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet
 
 
@@ -16,7 +15,55 @@ def generate_travel_pdf(
     Generate Travel Plan PDF
     """
 
-    file_name = "travel_plan.pdf"
+    from reportlab.platypus import (
+        SimpleDocTemplate,
+        Spacer,
+        Paragraph,
+    )
+
+
+from reportlab.lib.styles import (
+    getSampleStyleSheet,
+)
+from datetime import datetime
+import os
+
+
+def generate_travel_pdf(
+    result,
+    source_city,
+    destination_city,
+):
+    """
+    Generate Travel Plan PDF
+    """
+
+    # -------------------------
+    # Create folder automatically
+    # -------------------------
+    os.makedirs(
+        "generated_trips",
+        exist_ok=True,
+    )
+
+    # -------------------------
+    # Dynamic File Name
+    # -------------------------
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    file_name = (
+        f"generated_trips/"
+        f"trip_"
+        f"{source_city}_"
+        f"{destination_city}_"
+        f"{timestamp}.pdf"
+    )
+
+    pdf = SimpleDocTemplate(file_name)
+
+    styles = getSampleStyleSheet()
+
+    content = []
 
     pdf = SimpleDocTemplate(file_name)
 
@@ -28,9 +75,9 @@ def generate_travel_pdf(
     # Title
     # -------------------------
     title = Paragraph(
-        f"""
-        <font size=20 color='gold'>
-        AI Travel Plan
+        """
+        <font size="22" color="darkblue">
+        <b>✈ AI Travel Plan</b>
         </font>
         """,
         styles["Title"],
@@ -38,27 +85,29 @@ def generate_travel_pdf(
 
     content.append(title)
 
-    content.append(Spacer(1, 12))
+    content.append(Spacer(1, 15))
 
     # -------------------------
     # Trip Summary
     # -------------------------
     content.append(
         Paragraph(
-            "<b>Trip Summary</b>",
+            "Trip Summary",
             styles["Heading2"],
         )
     )
 
+    trip_summary = (
+        f"<b>Route:</b> "
+        f"{source_city} → {destination_city}"
+        f"<br/>"
+        f"<b>Duration:</b> "
+        f"{result['trip_summary']}"
+    )
+
     content.append(
         Paragraph(
-            f"""
-            {source_city}
-            →
-            {destination_city}
-            <br/>
-            {result['trip_summary']}
-            """,
+            trip_summary,
             styles["BodyText"],
         )
     )
@@ -70,62 +119,70 @@ def generate_travel_pdf(
     # -------------------------
     content.append(
         Paragraph(
-            "<b>Flight Details</b>",
+            "Flight Details",
             styles["Heading2"],
         )
     )
 
+    flight_details = (
+        f"<b>Airline:</b> "
+        f"{result['departure_flight']['airline']}"
+        f"<br/>"
+        f"<b>Departure:</b> "
+        f"{result['departure_flight']['departure']}"
+        f"<br/>"
+        f"<b>Arrival:</b> "
+        f"{result['departure_flight']['arrival']}"
+        f"<br/>"
+        f"<b>Price:</b> "
+        f"Rs. {result['departure_flight']['price']:,}"
+    )
+
     content.append(
         Paragraph(
-            f"""
-            Airline:
-            {result['departure_flight']['airline']}
-            <br/>
-            Departure:
-            {result['departure_flight']['departure']}
-            <br/>
-            Arrival:
-            {result['departure_flight']['arrival']}
-            <br/>
-            Price:
-            ₹{result['departure_flight']['price']}
-            """,
+            flight_details,
             styles["BodyText"],
         )
     )
 
+    content.append(Spacer(1, 10))
+
     # -------------------------
-    # Hotel
+    # Hotel Details
     # -------------------------
     content.append(
         Paragraph(
-            "<b>Hotel Details</b>",
+            "Hotel Details",
             styles["Heading2"],
         )
     )
 
+    hotel_details = (
+        f"<b>Hotel:</b> "
+        f"{result['hotel']['name']}"
+        f"<br/>"
+        f"<b>Stars:</b> "
+        f"{result['hotel']['stars']} Star"
+        f"<br/>"
+        f"<b>Price/Night:</b> "
+        f"Rs. {result['hotel']['price_per_night']:,}"
+    )
+
     content.append(
         Paragraph(
-            f"""
-            Hotel:
-            {result['hotel']['name']}
-            <br/>
-            Stars:
-            {result['hotel']['stars']}
-            <br/>
-            Price/Night:
-            ₹{result['hotel']['price_per_night']}
-            """,
+            hotel_details,
             styles["BodyText"],
         )
     )
 
+    content.append(Spacer(1, 10))
+
     # -------------------------
-    # Itinerary
+    # Travel Itinerary
     # -------------------------
     content.append(
         Paragraph(
-            "<b>Travel Itinerary</b>",
+            "Travel Itinerary",
             styles["Heading2"],
         )
     )
@@ -134,65 +191,71 @@ def generate_travel_pdf(
 
         content.append(
             Paragraph(
-                f"""
-                Day
-                {item['day']}:
-                {item['activity']}
-                """,
+                f"<b>Day {item['day']}:</b> " f"{item['activity']}",
                 styles["BodyText"],
             )
         )
 
+    content.append(Spacer(1, 10))
+
     # -------------------------
-    # Budget
+    # Budget Breakdown
     # -------------------------
     content.append(
         Paragraph(
-            "<b>Budget Breakdown</b>",
+            "Budget Breakdown",
             styles["Heading2"],
         )
     )
 
     budget = result["budget"]
 
+    budget_text = (
+        f"<b>Flight:</b> "
+        f"Rs. {budget['flight_cost']:,}"
+        f"<br/>"
+        f"<b>Hotel:</b> "
+        f"Rs. {budget['hotel_cost']:,}"
+        f"<br/>"
+        f"<b>Food:</b> "
+        f"Rs. {budget['food_cost']:,}"
+        f"<br/>"
+        f"<b>Transport:</b> "
+        f"Rs. {budget['local_transport']:,}"
+        f"<br/>"
+        f"<b>Activities:</b> "
+        f"Rs. {budget['activities_cost']:,}"
+        f"<br/><br/>"
+        f"<font color='green'>"
+        f"<b>Total Cost:</b> "
+        f"Rs. {budget['total_cost']:,}"
+        f"</font>"
+    )
+
     content.append(
         Paragraph(
-            f"""
-            Flight:
-            ₹{budget['flight_cost']}
-            <br/>
-            Hotel:
-            ₹{budget['hotel_cost']}
-            <br/>
-            Food:
-            ₹{budget['food_cost']}
-            <br/>
-            Transport:
-            ₹{budget['local_transport']}
-            <br/>
-            Activities:
-            ₹{budget['activities_cost']}
-            <br/>
-            Total:
-            ₹{budget['total_cost']}
-            """,
+            budget_text,
             styles["BodyText"],
         )
     )
+
+    content.append(Spacer(1, 10))
 
     # -------------------------
     # AI Insights
     # -------------------------
     content.append(
         Paragraph(
-            "<b>AI Insights</b>",
+            "AI Insights",
             styles["Heading2"],
         )
     )
 
+    ai_reasoning = result["reasoning"].replace("₹", "Rs. ")
+
     content.append(
         Paragraph(
-            result["reasoning"],
+            ai_reasoning,
             styles["BodyText"],
         )
     )
