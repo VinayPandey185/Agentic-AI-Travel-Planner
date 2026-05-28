@@ -119,6 +119,9 @@ Agentic-AI-Travel-Planner/
 │── agent/
 │   └── langchain_agent.py
 │
+│── assets/
+│   └── ai-trip-planner.png
+│
 │── tools/
 │   ├── flight_tool.py
 │   ├── hotel_tool.py
@@ -135,13 +138,23 @@ Agentic-AI-Travel-Planner/
 │   ├── hotels.json
 │   └── places.json
 │
+│── documents/
+│   ├── Agentic-AI-Travel-Planner_Report.pdf
+│   └── Sample_travel_plan_exported.pdf
+│
+│── Screenshots/
+│   ├── home_page.png
+│   ├── trip_generated_dashboard.png
+│   ├── flight_hotel_weather.png
+│   ├── travel_itinerary.png
+│   └── budget_ai_insights.png
+│
 │── app.py
 │── requirements.txt
-│── .env
 │── README.md
+│── .gitignore
 ```
 
----
 
 ## ⚙️ Installation & Setup
 
