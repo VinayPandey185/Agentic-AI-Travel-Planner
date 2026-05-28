@@ -105,7 +105,8 @@ Additional Smart Features:
 | Python | Core Programming |
 | Streamlit | Frontend UI |
 | LangChain | Agentic Workflow |
-| Groq LLM | AI Reasoning |
+| Groq LLM API | AI Reasoning |
+| Google Maps | Place Navigation |
 | Open-Meteo API | Live Weather |
 | JSON Dataset | Flights, Hotels, Places |
 | ReportLab | PDF Generation |
