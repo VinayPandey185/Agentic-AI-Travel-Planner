@@ -141,7 +141,10 @@ Agentic-AI-Travel-Planner/
 │
 │── documents/
 │   ├── Agentic-AI-Travel-Planner_Report.pdf
-│   └── Sample_travel_plan_exported.pdf
+│  
+│
+│── generated_trips/
+│   └── sample_generated_trip.pdf
 │
 │── Screenshots/
 │   ├── home_page.png
@@ -155,7 +158,6 @@ Agentic-AI-Travel-Planner/
 │── README.md
 │── .gitignore
 ```
-
 
 ## ⚙️ Installation & Setup
 
