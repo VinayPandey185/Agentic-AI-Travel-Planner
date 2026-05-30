@@ -713,6 +713,7 @@ if generate:
             """,
             unsafe_allow_html=True,
         )
+
         # -------------------------
         # Download PDF
         # -------------------------
@@ -727,6 +728,12 @@ if generate:
             destination_city,
         )
 
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        download_file_name = (
+            f"trip_" f"{source_city}_" f"{destination_city}_" f"{timestamp}.pdf"
+        )
+
         with open(
             pdf_file,
             "rb",
@@ -735,7 +742,7 @@ if generate:
             st.download_button(
                 label="📄 Download Travel Plan PDF",
                 data=pdf,
-                file_name="travel_plan.pdf",
+                file_name=download_file_name,
                 mime="application/pdf",
                 use_container_width=True,
             )
