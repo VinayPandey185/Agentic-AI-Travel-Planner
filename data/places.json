@@ -313,5 +313,145 @@
     "city": "Pune",
     "type": "market",
     "rating": 3.9
+  },
+  {
+    "place_id": "PLC0046",
+    "name": "Baga Beach",
+    "city": "Goa",
+    "type": "beach",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0047",
+    "name": "Calangute Beach",
+    "city": "Goa",
+    "type": "beach",
+    "rating": 4.7
+  },
+  {
+    "place_id": "PLC0048",
+    "name": "Fort Aguada",
+    "city": "Goa",
+    "type": "fort",
+    "rating": 4.6
+  },
+  {
+    "place_id": "PLC0049",
+    "name": "Golghar",
+    "city": "Patna",
+    "type": "monument",
+    "rating": 4.4
+  },
+  {
+    "place_id": "PLC0050",
+    "name": "Takht Sri Patna Sahib",
+    "city": "Patna",
+    "type": "temple",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0051",
+    "name": "Marine Drive Patna",
+    "city": "Patna",
+    "type": "park",
+    "rating": 4.5
+  },
+  {
+    "place_id": "PLC0052",
+    "name": "Bara Imambara",
+    "city": "Lucknow",
+    "type": "monument",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0053",
+    "name": "Rumi Darwaza",
+    "city": "Lucknow",
+    "type": "monument",
+    "rating": 4.7
+  },
+  {
+    "place_id": "PLC0054",
+    "name": "Cubbon Park",
+    "city": "Bangalore",
+    "type": "park",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0055",
+    "name": "Lalbagh Botanical Garden",
+    "city": "Bangalore",
+    "type": "park",
+    "rating": 4.9
+  },
+  {
+    "place_id": "PLC0056",
+    "name": "Sabarmati Riverfront",
+    "city": "Ahmedabad",
+    "type": "park",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0057",
+    "name": "Kochi Fort Area",
+    "city": "Kochi",
+    "type": "fort",
+    "rating": 4.7
+  },
+  {
+    "place_id": "PLC0058",
+    "name": "Dashashwamedh Ghat",
+    "city": "Varanasi",
+    "type": "monument",
+    "rating": 4.9
+  },
+  {
+    "place_id": "PLC0059",
+    "name": "City Palace",
+    "city": "Udaipur",
+    "type": "monument",
+    "rating": 4.9
+  },
+  {
+    "place_id": "PLC0060",
+    "name": "Mall Road",
+    "city": "Shimla",
+    "type": "market",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0061",
+    "name": "Golden Temple",
+    "city": "Amritsar",
+    "type": "temple",
+    "rating": 5.0
+  },
+  {
+    "place_id": "PLC0062",
+    "name": "Rock Garden",
+    "city": "Chandigarh",
+    "type": "park",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0063",
+    "name": "Bharat Mata Mandir",
+    "city": "Haridwar",
+    "type": "temple",
+    "rating": 4.7
+  },
+  {
+    "place_id": "PLC0064",
+    "name": "Laxman Jhula",
+    "city": "Rishikesh",
+    "type": "monument",
+    "rating": 4.8
+  },
+  {
+    "place_id": "PLC0065",
+    "name": "Hadimba Temple",
+    "city": "Manali",
+    "type": "temple",
+    "rating": 4.9
   }
 ]

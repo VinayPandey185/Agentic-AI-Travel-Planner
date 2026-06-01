@@ -358,5 +358,93 @@
     "stars": 4,
     "price_per_night": 3500,
     "amenities": ["wifi", "breakfast", "parking", "gym", "spa"]
+  },
+  {
+    "hotel_id": "HOT0046",
+    "name": "Goa Beach Resort",
+    "city": "Goa",
+    "stars": 5,
+    "price_per_night": 5200,
+    "amenities": ["wifi", "pool", "spa", "breakfast"]
+  },
+  {
+    "hotel_id": "HOT0047",
+    "name": "Patna Royal Residency",
+    "city": "Patna",
+    "stars": 4,
+    "price_per_night": 2800,
+    "amenities": ["wifi", "breakfast", "parking"]
+  },
+  {
+    "hotel_id": "HOT0048",
+    "name": "Patna Business Hotel",
+    "city": "Patna",
+    "stars": 3,
+    "price_per_night": 2200,
+    "amenities": ["wifi", "parking"]
+  },
+  {
+    "hotel_id": "HOT0049",
+    "name": "Lucknow Heritage Inn",
+    "city": "Lucknow",
+    "stars": 4,
+    "price_per_night": 3000,
+    "amenities": ["wifi", "breakfast", "gym"]
+  },
+  {
+    "hotel_id": "HOT0050",
+    "name": "Lucknow Grand Palace",
+    "city": "Lucknow",
+    "stars": 5,
+    "price_per_night": 4500,
+    "amenities": ["wifi", "pool", "spa", "gym"]
+  },
+  {
+    "hotel_id": "HOT0051",
+    "name": "Bangalore Tech Residency",
+    "city": "Bangalore",
+    "stars": 4,
+    "price_per_night": 3500,
+    "amenities": ["wifi", "gym", "breakfast"]
+  },
+  {
+    "hotel_id": "HOT0052",
+    "name": "Ahmedabad Business Hotel",
+    "city": "Ahmedabad",
+    "stars": 4,
+    "price_per_night": 3200,
+    "amenities": ["wifi", "breakfast", "parking"]
+  },
+  {
+    "hotel_id": "HOT0053",
+    "name": "Kochi Sea View Resort",
+    "city": "Kochi",
+    "stars": 5,
+    "price_per_night": 4800,
+    "amenities": ["wifi", "pool", "spa", "breakfast"]
+  },
+  {
+    "hotel_id": "HOT0054",
+    "name": "Varanasi Heritage Stay",
+    "city": "Varanasi",
+    "stars": 4,
+    "price_per_night": 2600,
+    "amenities": ["wifi", "breakfast"]
+  },
+  {
+    "hotel_id": "HOT0055",
+    "name": "Udaipur Lake Palace Inn",
+    "city": "Udaipur",
+    "stars": 5,
+    "price_per_night": 5500,
+    "amenities": ["wifi", "pool", "spa"]
+  },
+  {
+    "hotel_id": "HOT0056",
+    "name": "Shimla Mountain Resort",
+    "city": "Shimla",
+    "stars": 4,
+    "price_per_night": 4200,
+    "amenities": ["wifi", "breakfast", "parking"]
   }
 ]

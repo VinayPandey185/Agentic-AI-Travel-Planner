@@ -65,7 +65,17 @@ def search_flights(from_city, to_city, preference="cheapest"):
     # -------------------------
     if not matching_flights:
 
-        return {"message": "No flights found"}
+        return {
+            "flight_id": "DEFAULT001",
+            "airline": "IndiGo",
+            "from": from_city.title(),
+            "to": to_city.title(),
+            "departure_time": "2025-08-01T09:00:00",
+            "arrival_time": "2025-08-01T11:00:00",
+            "price": 4500,
+            "duration": 2.0,
+            "is_fallback": True,
+        }
 
     # -------------------------
     # Cheapest Flight
